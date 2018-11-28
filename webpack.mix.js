@@ -16,7 +16,7 @@ const mix = require('laravel-mix');
 mix.styles([
     'public/css/material_icons.css',
     './node_modules/material-kit/assets/css/material-kit.css',
-], 'public/css/app.css')
+], 'public/css/ui.css')
 .scripts([
     './node_modules/material-kit/assets/js/core/jquery.min.js',
     './node_modules/material-kit/assets/js/core/popper.min.js',
@@ -26,4 +26,6 @@ mix.styles([
     './node_modules/material-kit/assets/js/jquery.sharrre.js',
     './node_modules/material-kit/assets/js/moment.min.js',
     './node_modules/material-kit/assets/js/nouislider.min.js',
-], 'public/js/app.js');
+], 'public/js/ui.js')
+.sass('resources/sass/app.scss', 'public/css')
+;

@@ -8,6 +8,10 @@ use Illuminate\Mail\Markdown;
 
 class Post extends Model
 {
+    protected $appends = [
+        'display_content'
+    ];
+
     use SoftDeletes;
 
     const STATUS_DRAFT = 'draft';
@@ -18,9 +22,9 @@ class Post extends Model
         $query->where('status', self::STATUS_PUBLISHED);
     }
 
-    public function getContentAttribute()
+    public function getDisplayContentAttribute()
     {
-        return Markdown::parse($this->attributes['content']);
+        return (new \Parsedown())->text($this->attributes['content']);
     }
 
     public function getUrlAttribute()

@@ -6,7 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/ui.css') }}">
+    @yield('styles')
     <title>Document</title>
 </head>
 <body class="index-page sidebar-collapse">
@@ -24,19 +25,19 @@
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                @if(! empty($categories))
-                    @foreach($categories as $category)
-                        @php $hasChild = $category->allChildren->isNotEmpty(); @endphp
+                @if(! empty($menus))
+                    @foreach($menus as $menu)
+                        @php $hasChild = $menu->allChildren->isNotEmpty(); @endphp
                         <li class="nav-item @if($hasChild) dropdown @endif">
-                            <a href="{{ $category->link }}"
-                               target="{{ $category->target }}"
+                            <a href="{{ $menu->link }}"
+                               target="{{ $menu->target }}"
                                class="nav-link @if($hasChild) dropdown-toggle @endif"
                                @if($hasChild) data-toggle="dropdown" @endif >
-                                {{ $category->name }}
+                                {{ $menu->name }}
                             </a>
                             @if($hasChild)
                             <div class="dropdown-menu dropdown-with-icons">
-                                @foreach($category->allChildren as $subMenu)
+                                @foreach($menu->allChildren as $subMenu)
                                 <a href="{{ $subMenu->link }}" target="{{ $subMenu->target }}" class="dropdown-item">
                                     {{ $subMenu->name }}
                                 </a>
@@ -216,7 +217,7 @@
     </div>
 </footer>
 
-<script src="{{ mix('/js/app.js') }}"></script>
+<script src="{{ mix('/js/ui.js') }}"></script>
 <script>
     $(document).ready(function() {
         //init DateTimePickers

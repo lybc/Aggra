@@ -1,7 +1,7 @@
 @extends('blog.layout')
 
 @section('content')
-    <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('{{ $category->cover }}');">
+    <div class="page-header header-filter clear-filter" data-parallax="true" style="background-image: url('/imgs/daniel-leone-185834-unsplash.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">
@@ -26,7 +26,7 @@
                             Rosa Thompson
                             <small>· {{ $post->created_at->diffForHumans() }}</small>
                         </h4>
-                        {!! get_description($post->content) !!}
+                        {!! get_description($post->display_content) !!}
                         {{--<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>--}}
                         {{--<p> Don't forget, You're Awesome!</p>--}}
                         <div class="media-footer">

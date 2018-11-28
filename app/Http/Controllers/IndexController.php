@@ -10,7 +10,6 @@ class IndexController extends Controller
 {
     public function index()
     {
-//        $categories = Category::with('allChildren')->where('parent_id', 0)->get();
         $posts = Post::published()->orderByDesc('created_at')->paginate();
         return view('blog.category', compact('posts'));
     }
