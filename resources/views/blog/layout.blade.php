@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ mix('/css/ui.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @yield('styles')
-    <title>Document</title>
+    <title> {{ config('app.name') }} | @yield('title')</title>
 </head>
 <body class="index-page sidebar-collapse">
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
@@ -209,10 +210,12 @@
         </div>
         <hr>
         <div class="copyright pull-center">
-            Copyright ©
-            <script>
-                document.write(new Date().getFullYear())
-            </script>2018 Creative Tim All Rights Reserved.
+            <p>
+                Coding by Lybc
+                <i class="material-icons" style="color: #e27575;">favorite</i>
+                赣ICP备17012171号-2
+            </p>
+
         </div>
     </div>
 </footer>

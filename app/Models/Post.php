@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Utils\Markdown;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Mail\Markdown;
 
 class Post extends Model
 {
@@ -25,6 +25,11 @@ class Post extends Model
     public function getDisplayContentAttribute()
     {
         return (new \Parsedown())->text($this->attributes['content']);
+    }
+
+    public function getTocAttribute()
+    {
+
     }
 
     public function getUrlAttribute()

@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">
                     <div class="brand">
-                        <h1>测试一下中文怎么样</h1>
+                        <h1>你好！伙计！</h1>
                         <h3>A Badass Bootstrap 4 UI Kit based on Material Design.</h3>
                     </div>
                 </div>
@@ -23,8 +23,7 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">
-                            Rosa Thompson
-                            <small>· {{ $post->created_at->diffForHumans() }}</small>
+                            <small>{{ $post->created_at->diffForHumans() }}</small>
                         </h4>
                         {!! get_description($post->display_content) !!}
                         {{--<p>Hello guys, nice to have you on the platform! There will be a lot of great stuff coming soon. We will keep you posted for the latest news.</p>--}}
