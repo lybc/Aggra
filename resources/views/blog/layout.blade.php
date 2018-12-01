@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ mix('/css/ui.css') }}">
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     @yield('styles')
+    <script src="{{ mix('/js/ui.js') }}"></script>
     <title> {{ config('app.name') }} | @yield('title')</title>
 </head>
 <body class="index-page sidebar-collapse">
@@ -220,11 +221,10 @@
     </div>
 </footer>
 
-<script src="{{ mix('/js/ui.js') }}"></script>
 <script>
     $(document).ready(function() {
         //init DateTimePickers
-        materialKit.initFormExtendedDatetimepickers();
+        // materialKit.initFormExtendedDatetimepickers();
 
         // Sliders Init
         materialKit.initSliders();
@@ -241,56 +241,55 @@
 
 
     $(document).ready(function() {
+        // $('#facebook').sharrre({
+        //     share: {
+        //         facebook: true
+        //     },
+        //     enableHover: false,
+        //     enableTracking: false,
+        //     enableCounter: false,
+        //     click: function(api, options) {
+        //         api.simulateClick();
+        //         api.openPopup('facebook');
+        //     },
+        //     template: '<i class="fab fa-facebook-f"></i> Facebook',
+        //     url: 'https://demos.creative-tim.com/material-kit/index.html'
+        // });
 
-        $('#facebook').sharrre({
-            share: {
-                facebook: true
-            },
-            enableHover: false,
-            enableTracking: false,
-            enableCounter: false,
-            click: function(api, options) {
-                api.simulateClick();
-                api.openPopup('facebook');
-            },
-            template: '<i class="fab fa-facebook-f"></i> Facebook',
-            url: 'https://demos.creative-tim.com/material-kit/index.html'
-        });
+        // $('#googlePlus').sharrre({
+        //     share: {
+        //         googlePlus: true
+        //     },
+        //     enableCounter: false,
+        //     enableHover: false,
+        //     enableTracking: true,
+        //     click: function(api, options) {
+        //         api.simulateClick();
+        //         api.openPopup('googlePlus');
+        //     },
+        //     template: '<i class="fab fa-google-plus"></i> Google',
+        //     url: 'https://demos.creative-tim.com/material-kit/index.html'
+        // });
 
-        $('#googlePlus').sharrre({
-            share: {
-                googlePlus: true
-            },
-            enableCounter: false,
-            enableHover: false,
-            enableTracking: true,
-            click: function(api, options) {
-                api.simulateClick();
-                api.openPopup('googlePlus');
-            },
-            template: '<i class="fab fa-google-plus"></i> Google',
-            url: 'https://demos.creative-tim.com/material-kit/index.html'
-        });
-
-        $('#twitter').sharrre({
-            share: {
-                twitter: true
-            },
-            enableHover: false,
-            enableTracking: false,
-            enableCounter: false,
-            buttons: {
-                twitter: {
-                    via: 'CreativeTim'
-                }
-            },
-            click: function(api, options) {
-                api.simulateClick();
-                api.openPopup('twitter');
-            },
-            template: '<i class="fab fa-twitter"></i> Twitter',
-            url: 'https://demos.creative-tim.com/material-kit/index.html'
-        });
+        // $('#twitter').sharrre({
+        //     share: {
+        //         twitter: true
+        //     },
+        //     enableHover: false,
+        //     enableTracking: false,
+        //     enableCounter: false,
+        //     buttons: {
+        //         twitter: {
+        //             via: 'CreativeTim'
+        //         }
+        //     },
+        //     click: function(api, options) {
+        //         api.simulateClick();
+        //         api.openPopup('twitter');
+        //     },
+        //     template: '<i class="fab fa-twitter"></i> Twitter',
+        //     url: 'https://demos.creative-tim.com/material-kit/index.html'
+        // });
 
     });
 </script>

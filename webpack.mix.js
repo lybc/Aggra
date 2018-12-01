@@ -14,8 +14,9 @@ const mix = require('laravel-mix');
 // mix.js('resources/js/app.js', 'public/js')
 //    .sass('resources/sass/app.scss', 'public/css');
 mix.styles([
+    // './node_modules/jquery.tocify/src/stylesheets/jquery.tocify.css',
     'public/css/material_icons.css',
-    './node_modules/material-kit/assets/css/material-kit.css',
+    // './node_modules/material-kit/assets/css/material-kit.css',
 ], 'public/css/ui.css')
 .scripts([
     './node_modules/material-kit/assets/js/core/jquery.min.js',
@@ -26,6 +27,8 @@ mix.styles([
     './node_modules/material-kit/assets/js/jquery.sharrre.js',
     './node_modules/material-kit/assets/js/moment.min.js',
     './node_modules/material-kit/assets/js/nouislider.min.js',
+    './node_modules/sticky-sidebar/dist/jquery.sticky-sidebar.min.js'
 ], 'public/js/ui.js')
-.sass('resources/sass/app.scss', 'public/css')
-;
+.sass('resources/sass/app.scss', 'public/css').options({
+    processCssUrls: false
+}).version();

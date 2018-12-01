@@ -1,62 +1,8 @@
+@import "../../node_modules/material-kit/assets/scss/material-kit";
+@import "post";
+
 $banner-height: 400px;
 $title-color: #fff;
-
-.post-content {
-    width: 80%;
-    margin-top: 30px;
-}
-
-.article {
-    margin-bottom: 20px;
-    pre {
-        border-radius: 4px !important;
-        code {
-            padding: 1em 1em 1em 1em;
-        }
-    }
-
-    img {
-        display: block;
-        padding-top: 3px;
-        box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
-        border-radius: .25rem!important;
-    }
-
-    blockquote {
-        position: relative;
-        color: #999;
-        font-weight: 400;
-        border-left: 1px solid #1abc9c;
-        padding-left: 1em;
-        margin: 1em 0em 1em 0em;
-    }
-
-}
-
-
-
-.title {
-    &-area {
-        height: $banner-height;
-        background-color: gray;
-        width: 100%;
-    }
-    &-content {
-        padding-top: $banner-height / 3;
-        color: $title-color;
-
-        h1 {
-            font-size: 2em;
-        }
-    }
-}
-
-
-.toc {
-    margin: 0;
-    padding: 0;
-    background: radial-gradient(ellipse at center, #585858 0, #232323 100%);
-}
 
 .footer {
     &-black {
@@ -81,6 +27,4 @@ $title-color: #fff;
             opacity: 1;
         }
     }
-
-
 }

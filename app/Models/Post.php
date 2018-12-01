@@ -24,7 +24,7 @@ class Post extends Model
 
     public function getDisplayContentAttribute()
     {
-        return (new \Parsedown())->text($this->attributes['content']);
+        return (new Markdown())->text($this->attributes['content']);
     }
 
     public function getTocAttribute()
